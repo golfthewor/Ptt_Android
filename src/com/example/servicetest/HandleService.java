@@ -108,7 +108,7 @@ public class HandleService extends Activity {
 		Log.d("Log","In getall");
 		for(data item : temp_dataList)
 		{   
-		     //Log.d("null",item.getProduct()+ " "+ item.getPrice());
+		     Log.d("null",item.getProduct()+ " "+ item.getPrice());
 		      
 		      gas = item.getProduct();
 		      value = item.getPrice();

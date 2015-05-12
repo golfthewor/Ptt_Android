@@ -47,9 +47,9 @@ public class MainActivity extends Activity {
 		ngv = (TextView) findViewById(R.id.txt8);
 		hpd = (TextView) findViewById(R.id.txt9);
 		
-		Log.d("null","Call ConnectPtt");
+		Log.d("Log","Call ConnectPtt");
 		ConnectPtt();
-		Log.d("null","Out ConnectPtt");
+		Log.d("Log","Out ConnectPtt");
 		
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 		alertDialogBuilder.setCancelable(true)
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 			public void run() {
 
 				try {
-					Log.d("null","In ConnectPtt");
+					Log.d("Log","In ConnectPtt");
 					SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
 					request.addProperty("Language", "EN");
 
@@ -109,9 +109,9 @@ public class MainActivity extends Activity {
 				}
 
 				try {
-					Log.d("null","Call parser");
+					Log.d("Log","Call parser");
 					sv.pareser(Results);
-					Log.d("null","Call set output");
+					Log.d("Log","Call set output");
 					SetOutput();
 				} catch (XmlPullParserException | IOException e) {
 					// TODO Auto-generated catch block
@@ -137,10 +137,10 @@ public class MainActivity extends Activity {
 			H95 = sv.getGasohol95();
 			NGV = sv.getNGV();
 			HPD = sv.getHyForcePremiumDiesel();
-			Log.d("null","Set output complete");
+			Log.d("Log","Set output complete");
 		}catch (Exception e) {
 			e.printStackTrace();
-			Log.d("null","Set output fail");
+			Log.d("Log","Set output fail");
 		}
 		
 
